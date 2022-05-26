@@ -15,6 +15,7 @@ public class Main {
         ConfigurableApplicationContext context
                 = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
+        // get number generator bean from context (container)
         NumberGenerator numberGenerator
                 = context.getBean("numberGenerator", NumberGenerator.class);
 
@@ -23,6 +24,12 @@ public class Main {
 
         // log generated number
         log.info("number = {}", number);
+
+        // get game bean from context (container)
+        Game game = context.getBean(Game.class);
+
+        // call reset method
+        game.reset();
 
         // close context (container)
         context.close();
