@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
 @Component
+
 public class ConsoleNumberGuess {
     // == constants ==
     private static final Logger log = LoggerFactory.getLogger(ConsoleNumberGuess.class);
